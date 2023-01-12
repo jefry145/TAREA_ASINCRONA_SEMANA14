@@ -1,0 +1,12 @@
+h2{
+    font-weight: 900;
+}
+input,
+select{
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 2px rgb(214, 214, 214);
+}
+p{
+    font-weight: 900;
+    color: rgb(0, 124, 133);
+}

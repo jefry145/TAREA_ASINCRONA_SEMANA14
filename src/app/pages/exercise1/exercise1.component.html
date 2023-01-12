@@ -1,0 +1,54 @@
+<form class="font-monospace py-5 px-5" action="" [formGroup]="formLogin">
+    <div class="row">
+        <div class="col">
+            <h2>FORM DATA</h2>
+        </div>
+    </div>
+    <div class="" *ngIf="resultado">
+        <app-exercise1result [pasardatoshijo2]="pasardatoshijo"></app-exercise1result>
+    </div>
+   <div class="row">
+        <div class="col-3">
+            <label for="">Nombre:</label><br>
+            <input class="form-control" type="text" formControlName="name" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3" >
+            <label for="">Apellidos:</label><br>
+            <input class="form-control" type="text" formControlName="surname">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="">DNI:</label><br>
+            <input class="form-control" type="text" formControlName="DNI">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <label for="">Estado civil:</label><br>
+            <select class="form-select" name="" id="" formControlName="situaciòn">
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+            </select>
+       </div>
+    </div>
+    <div class="row">
+        <div class="col py-3 px-2" *ngIf="show">
+             <p>ENVIADO EXITOSAMENTE</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col py-2">
+          <button class="btn btn-primary" type="submit" (click)="mostrarMsg()" [disabled]="formLogin.invalid">Submit</button>
+        </div>
+    </div>
+    <!-- {{formLogin.valid}} -->
+    <!-- <div class="row">
+        <div class="col">
+            {{formLogin.value | JsonPipe}}
+        </div>
+    </div> -->
+    <!-- //pasando datos del padre al hijo -->
+</form>
